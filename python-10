@@ -1,0 +1,139 @@
+
+nums=[12, 34, 2, 56, 90, 33, 89, 120, 20, 25, 191]
+nums = sorted(nums)
+target = 900
+left = 0 
+right = len(nums) - 1 
+found = False
+while left <= right:
+    mid = (left + right) // 2 
+    if nums[mid] == target:
+        found = True
+        break 
+    elif nums[mid] > target:
+        right = mid - 1 
+    else:
+        left = mid + 1 
+if found == True:
+    print("Found")
+else:
+    print("Not found")
+ 
+ 
+ 
+ 
+ 
+ 
+# Complexities order (time as well as space)
+#  O(1) < 
+#  O(log N) < 
+#  O(sqrt N) < 
+#  O(N) < 
+#  O(N log N) < 
+#  O(N*N) < 
+#  O(N*N*N) <
+#  ...
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+# 2, 12, 20,  25, 33, 34, 56, 89, 90, 120, 191 
+# 0   1   2   3   4   5   6   7   8    9    10
+ 
+# target = 25
+ 
+# iteration-1: 
+#     left = 0    right = 10
+#     mid = 5   value = 34 
+ 
+# iteration-2:
+#     left = 0    right = 4 
+#     mid = 2     value = 20 
+ 
+# iteration-3:
+#     left = 3    right = 4 
+#     mid = 3   value = 25 
+#     Our target value is equal to mid-pointing value, so we stop our iterations
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+#target = 97
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+# nums = [2, 12, 20, 33, 34, 56, 89, 90, 120]
+#         0   1   2   3   4   5   6   7   8 
+ 
+# target = 90
+# left <= right 
+ 
+# Time complexity is --> O(log N)
+ 
+# left = 9
+# right = 8 
+ 
+# mid = (left + right) // 2 
+ 
+# mid = 8
+ 
+ 
+# target = 1200
+# lengthOfList = 9 
+ 
+# 6754
+ 
+# 11000
+ 
+# Time complexity of linear search is O(N).
+# N --> O(N)
+# order of N, where 'N' is the length of list 
+ 
+ 
+ 
+# # if target is not present, we need to print -1 
+# # if target is present, then print its index (0-based indexing)
+ 
+ 
+ 
+ 
+
+
+ 
